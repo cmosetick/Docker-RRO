@@ -26,8 +26,7 @@ RUN cd /tmp \
 &&  tar -xzf RRO-8.0-Beta-Ubuntu-14.04.x86_64.tar.gz \
 && ./install.sh
 
-## Note, your R session will use whatever snapshot date was last set by the RRO installer.
-## This is just to set a sane cantainer wide default and is not required
+## This is just to set a sane container wide default and is not required
 RUN mkdir /etc/R \
 && touch /etc/R/Rprofile.site \
 && echo 'options(repos = list(CRAN = "http://cran.revolutionanalytics.com/"))' >> /etc/R/Rprofile.site
@@ -35,6 +34,7 @@ RUN mkdir /etc/R \
 ## By default the `checkpoint` R package is in RRO.
 ## Use the command below to load it into your R session
 ## library("checkpoint")
+## Select a snapshot date in the past, as in the example below
 ## checkpoint("2014-11-10")
 
 ## Set a default user. Available via runtime flag `--user docker` 
