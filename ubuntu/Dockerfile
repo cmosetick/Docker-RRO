@@ -21,15 +21,15 @@ RUN apt-get update -qq \
     curl
 
 ## Install Revolution R Open 8.0 Beta
-RUN cd /tmp
-&& wget http://mran.revolutionanalytics.com/install/RRO-8.0-Beta-Ubuntu-14.04.x86_64.tar.gz
-&& tar -xzf RRO-8.0-Beta-Ubuntu-14.04.x86_64.tar.gz
+RUN cd /tmp \
+&& wget http://mran.revolutionanalytics.com/install/RRO-8.0-Beta-Ubuntu-14.04.x86_64.tar.gz \
+&&  tar -xzf RRO-8.0-Beta-Ubuntu-14.04.x86_64.tar.gz \
 && ./install.sh
 
 ## Note, your R session will use whatever snapshot date was last set by the RRO installer.
 ## This is just to set a sane cantainer wide default and is not required
-RUN mkdir /etc/R
-&& touch /etc/R/Rprofile.site
+RUN mkdir /etc/R \
+&& touch /etc/R/Rprofile.site \
 && echo 'options(repos = list(CRAN = "http://cran.revolutionanalytics.com/"))' >> /etc/R/Rprofile.site
 
 ## By default the `checkpoint` R package is in RRO.
