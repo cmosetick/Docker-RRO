@@ -17,6 +17,7 @@ RUN apt-get update -qq \
     vim-tiny \
     nano \
     wget \
+    git \
     libcurl4-openssl-dev \
     curl
 
