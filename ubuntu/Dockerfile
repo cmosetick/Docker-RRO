@@ -1,3 +1,6 @@
+## Example Usage:
+## docker run -v $HOME/Rdata:/data -it revolutionanalytics/rro-ubuntu R
+
 ## Adapted from:
 ## https://registry.hub.docker.com/u/rocker/r-base/dockerfile/
 
@@ -5,6 +8,12 @@
 FROM ubuntu:14.04
 
 MAINTAINER "Chris Mosetick" chris@revolutionanalytics.com
+
+## Start in /root, not / so checkpoint package does not attempt to scan whole file system.
+WORKDIR /root
+
+## This is the container file system location where users can access data from their local systems with the -v option
+VOLUME /data
 
 ## Remain current
 RUN apt-get update -qq \
@@ -18,6 +27,7 @@ RUN apt-get update -qq \
     nano \
     wget \
     git \
+    g++ \
     libcurl4-openssl-dev \
     curl
 
