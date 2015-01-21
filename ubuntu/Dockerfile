@@ -1,4 +1,10 @@
 ## Example Usage:
+
+## To run RStudio server
+## docker run -v $HOME/Rdata:/data -p 8787:8787 -d rro-ubuntu
+## login: docker password: docker
+#
+# To run R
 ## docker run -v $HOME/Rdata:/data -it revolutionanalytics/rro-ubuntu R
 
 ## Adapted from:
