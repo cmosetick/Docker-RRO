@@ -49,3 +49,11 @@ ifneq ("$(wildcard .container-id)","")
 else
 		@echo "no docker container to stop"
 endif
+
+.PHONY: bash
+bash:
+ifneq ("$(wildcard .container-id)","")
+		@docker exec -ti $(shell cat .container-id | head -n 1) bash
+else
+		@echo "no docker container running"
+endif
