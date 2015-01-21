@@ -13,13 +13,13 @@ Check if docker is running:
 
     make setup
 
-To build and run the app do
+To build and run the container do
 
     make run
 
-this will build the app and start it. The first time you do this it might take a while, as docker needs to download some base images. 
+this will build the container and starts it. The first time you do this it might take a while, as docker needs to download some base images. 
 
-If you only want to build app and not yet run it, use the
+If you only want to build the container and not yet run it, use the
 
     make build
 
