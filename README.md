@@ -36,7 +36,7 @@ and
 
 commands.
 
-RStudio server can now be reached on **http://localhost:8787** (note: on MacOS localhost needs to be replaced with de boot2docker ip), to login use **login:docker** and **password:docker**.
+RStudio server can now be reached on **http://localhost:8787** (note: on MacOS localhost needs to be replaced with de boot2docker ip), to login use **login: docker** and **password: docker**.
 
 The default directory that is shared with the container is **$HOME/Rdata**.
 
