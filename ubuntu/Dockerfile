@@ -33,8 +33,8 @@ RUN apt-get update -qq \
 
 ## Install Revolution R Open 8.0 Beta
 RUN cd /tmp \
-&& wget http://mran.revolutionanalytics.com/install/RRO-8.0-Beta-Ubuntu-14.04.x86_64.tar.gz \
-&&  tar -xzf RRO-8.0-Beta-Ubuntu-14.04.x86_64.tar.gz \
+&& wget http://mran.revolutionanalytics.com/install/RRO-8.0.1-Beta3-Ubuntu-14.04.x86_64.tar.gz \
+&&  tar -xzf RRO-8.0.1-Beta3-Ubuntu-14.04.x86_64.tar.gz \
 && ./install.sh
 
 ## This is just to set a sane container wide default and is not required
